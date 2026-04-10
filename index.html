@@ -11,9 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#C9A8A5',
-                        secondary: '#F8F5F4',
-                        dark: '#333333',
+                        primary: '#B8869C',
+                        secondary: '#F9F5F7',
+                        dark: '#222222',
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -25,10 +25,13 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .text-shadow {
-                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
             }
             .content-auto {
                 content-visibility: auto;
+            }
+            .gold-gradient {
+                background: linear-gradient(135deg, #D4AF37 0%, #F4E4C1 50%, #D4AF37 100%);
             }
         }
     </style>
@@ -39,7 +42,7 @@
     <section class="py-16 px-4 bg-secondary">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-1/2 text-center md:text-left space-y-6">
-                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold leading-tight text-dark">
+                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold leading-tight text-dark text-shadow">
                     Descubra como <span class="text-primary">construir uma fonte de renda</span> usando apenas o celular
                 </h1>
                 <p class="text-lg text-gray-600">
@@ -48,23 +51,31 @@
                 <a href="#comprar" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg transition-all transform hover:scale-105">
                     QUERO GARANTIR O MEU GUIA
                 </a>
+                <p class="text-sm text-gray-500 mt-2">Conhecimento que transforma | Estude no seu ritmo</p>
             </div>
             <div class="md:w-1/2">
-                <img src="https://i.imgur.com/9Z7X7ZL.png" alt="Débora Rodrigues" class="rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl mx-auto">
+                <img src="https://i.imgur.com/yourimage.png" alt="Débora Rodrigues" class="rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl mx-auto">
             </div>
         </div>
     </section>
 
     <!-- SOBRE A AUTORA -->
     <section class="py-16 px-4 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Quem está compartilhando esse conteúdo?</h2>
-            <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                Olá! Eu sou a <strong>Débora Rodrigues de Souza</strong>. Assim como você, eu sou mãe e sei como é desafiador conciliar os cuidados com a família com a necessidade de gerar renda.
-            </p>
-            <p class="text-lg leading-relaxed text-gray-700">
-                Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital. Hoje, compartilho esse conhecimento para ajudar outras pessoas a conquistarem mais autonomia e qualidade de vida através da internet.
-            </p>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Quem está compartilhando esse conteúdo?</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10 bg-secondary p-8 rounded-2xl shadow-sm">
+                <div class="md:w-1/3">
+                     <img src="https://i.imgur.com/yourimage.png" alt="Débora Rodrigues" class="rounded-full w-56 h-56 object-cover border-4 border-white shadow-lg mx-auto">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left space-y-4">
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Olá! Eu sou a <strong>Débora Rodrigues de Souza</strong>. Assim como você, eu sou mãe e sei como é desafiador conciliar os cuidados com a família com a necessidade de gerar renda.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital. Hoje, compartilho esse conhecimento para ajudar outras pessoas a conquistarem mais autonomia e qualidade de vida através da internet.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -73,19 +84,19 @@
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">O que você vai aprender no Guia?</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="font-bold text-xl mb-3 text-primary">📱 Fundamentos do Digital</h3>
                     <p>Os conceitos básicos e essenciais para entender como funciona o mercado digital de forma profissional.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="font-bold text-xl mb-3 text-primary">🚀 Estratégias Práticas</h3>
                     <p>Passo a passo de métodos que podem ser aplicados no dia a dia, utilizando apenas o seu celular.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="font-bold text-xl mb-3 text-primary">🧠 Mentalidade e Organização</h3>
                     <p>Como organizar sua rotina e manter o foco para construir algo consistente sem negligenciar outras áreas da vida.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="font-bold text-xl mb-3 text-primary">📈 Crescimento Sustentável</h3>
                     <p>Direcionamento sobre como estudar, aplicar e evoluir dentro do mercado digital de maneira realista.</p>
                 </div>
@@ -96,7 +107,7 @@
     <!-- PARA QUEM É / NÃO É -->
     <section class="py-16 px-4 bg-white">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-            <div class="bg-green-50 p-8 rounded-xl border border-green-100">
+            <div class="bg-green-50 p-8 rounded-xl border border-green-100 shadow-sm">
                 <h3 class="text-2xl font-bold text-green-700 mb-4">✅ Para quem é este Guia</h3>
                 <ul class="space-y-3 text-green-800">
                     <li>• Para quem quer aprender conceitos reais de Marketing Digital.</li>
@@ -105,7 +116,7 @@
                     <li>• Para quem valoriza conteúdo educativo e de qualidade.</li>
                 </ul>
             </div>
-            <div class="bg-red-50 p-8 rounded-xl border border-red-100">
+            <div class="bg-red-50 p-8 rounded-xl border border-red-100 shadow-sm">
                 <h3 class="text-2xl font-bold text-red-700 mb-4">❌ Não é para você se</h3>
                 <ul class="space-y-3 text-red-800">
                     <li>• Você busca fórmulas mágicas ou ganhos garantidos.</li>
@@ -144,22 +155,33 @@
 
     <!-- CTA FINAL -->
     <section id="comprar" class="py-16 px-4 bg-primary text-white">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
             <h2 class="text-4xl font-bold">Pronto para investir no seu conhecimento?</h2>
-            <p class="text-xl">Adquira agora o Guia Renda Digital e comece a estudar estratégias para mudar sua realidade.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <p class="text-xl opacity-90">Adquira agora o Guia Renda Digital e comece a estudar estratégias para mudar sua realidade.</p>
+
+            <!-- SELO DE GARANTIA -->
+            <div class="flex justify-center my-4">
+                <div class="bg-black text-yellow-400 border-2 border-yellow-400 rounded-full p-4 inline-flex items-center gap-3 font-bold shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span class="text-lg">GARANTIA DE 7 DIAS</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <a href="LINK_DA_SUA_COMPRA_AQUI" class="bg-white text-primary font-bold py-4 px-12 rounded-lg text-xl shadow-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
-                    COMPRAR AGORA
+                    QUERO ACESSAR O GUIA AGORA
                 </a>
             </div>
-            <p class="text-sm opacity-80">Pagamento seguro | Acesso Imediato | Garantia de 7 Dias</p>
+            <p class="text-sm opacity-80 mt-4">Pagamento seguro | Acesso Imediato | Satisfação Garantida ou seu dinheiro de volta</p>
         </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer class="bg-dark text-white py-10 px-4">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-6">
+            <div class="text-center mb-6 space-y-2">
                 <p>&copy; 2025 - Débora Rodrigues de Souza</p>
                 <p>CPF: 147.041.089-78</p>
                 <p>E-mail: suporte.rendadigitaloficiaal@gmail.com</p>
@@ -178,7 +200,7 @@
     <section id="politica" class="py-16 px-4 bg-gray-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Política de Privacidade</h2>
-            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4">
+            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4 shadow-sm">
                 <p>A sua privacidade é importante para nós. É política do Guia Renda Digital respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site.</p>
                 <p>Solicitamos informações pessoais apenas para poder lhe fornecer um serviço ou produto, de forma legal e legítima. Fazemos isso com total transparência e respeito.</p>
                 <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei ou para cumprir obrigações legais.</p>
@@ -191,14 +213,8 @@
     <section id="termos" class="py-16 px-4 bg-gray-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Termos de Uso</h2>
-            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4">
+            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4 shadow-sm">
                 <p>Ao acessar ou usar este site, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis.</p>
                 <p>O conteúdo apresentado neste site é para fins educacionais e informativos. Todo o material é protegido por leis de direitos autorais.</p>
                 <p>Não garantimos resultados financeiros. O sucesso nas áreas abordadas depende do empenho, dedicação e capacidade individual de cada aluno.</p>
                 <p>Reservamos o direito de modificar ou revisar estes termos a qualquer momento. Ao utilizar este site, você concorda em ficar vinculado à versão atual destes termos de serviço.</p>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
