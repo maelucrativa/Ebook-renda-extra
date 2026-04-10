@@ -1,158 +1,500 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+font-size: 0.96rem;
+}<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ebook Renda Extra no Digital | Deborah Rodrigues de Souza</title>
-  <meta name="description" content="Aprenda os primeiros passos no mercado digital e marketing de afiliados com um guia feito para mulheres e mães que querem começar com o celular." />
-
+  <meta name="description" content="Ebook em PDF sobre mercado digital e marketing de afiliados para mulheres e mães que desejam começar com mais clareza usando o celular." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f14;
-      color: #fff;
-    }
+    :root {
+      --bg: #0b0b10;
+      --bg-soft: #14141c;
+      --card: #181822;
+      --line: rgba(255,255,255,0.10);
+      --text: #f7f3ea;
+      --muted: #cec7bb;
+      --gold: #d9b75f;
+      --gold-strong: #f1d483;
+      --shadow: 0 18px 45px rgba(0,0,0,0.35);
+      --radius: 22px;
+      --max: 1120px;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #09090d 0%, #101019 45%, #0b0b10 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    h1, h2 {
-      color: #f5d67a;
-    }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    .hero {
-      padding: 40px 0;
-      text-align: center;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .hero img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-      margin-top: 20px;
-    }
+.container {
+  width: min(92%, var(--max));
+  margin: 0 auto;
+}
 
-    .btn {
-      display: inline-block;
-      background: #f5d67a;
-      color: #000;
-      padding: 15px 25px;
-      margin-top: 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(9,9,13,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
 
-    .section {
-      padding: 30px 0;
-    }
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  flex-wrap: wrap;
+}
 
-    .box {
-      background: #1a1a22;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 20px;
-    }
+.brand {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-strong);
+}
 
-    footer {
-      padding: 30px 0;
-      text-align: center;
-      font-size: 14px;
-      color: #ccc;
-    }
+.nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero {
+  padding: 52px 0 30px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid rgba(217,183,95,0.30);
+  border-radius: 999px;
+  color: var(--gold-strong);
+  background: rgba(217,183,95,0.08);
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4.8vw, 4rem);
+  line-height: 1.08;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  margin-bottom: 12px;
+  color: var(--gold-strong);
+  line-height: 1.15;
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.hero-image,
+.about-image {
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #12121a;
+}
+
+.hero-image img,
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 430px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.price-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 18px;
+  min-width: 150px;
+}
+
+.price-label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-strong);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--gold-strong), var(--gold));
+  color: #1a1407;
+  box-shadow: 0 14px 28px rgba(217,183,95,0.18);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.note,
+.notice {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin-top: 18px;
+  color: #e7dfd0;
+}
+
+.section {
+  padding: 34px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--gold-strong);
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.topic-list,
+.check-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.topic-list li,
+.check-list li {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: var(--muted);
+}
+
+.highlight {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.guarantee {
+  text-align: center;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(217,183,95,0.26);
+  background: linear-gradient(180deg, rgba(217,183,95,0.10), rgba(255,255,255,0.03));
+  box-shadow: var(--shadow);
+}
+
+.guarantee strong {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--gold-strong);
+  margin-bottom: 10px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+footer {
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+}
+
+footer p {
+  margin-bottom: 8px;
+
+.small {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .split,
+  .cards,
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+}
+
   </style>
 </head>
-
 <body>
-
-  <section class="hero">
+  <header class="topbar">
     <div class="container">
-      <h1>Aprenda o básico do mercado digital usando apenas seu celular</h1>
-      <p>Um guia direto, pensado para mulheres e mães que querem começar com mais clareza e segurança.</p>
-
-      <!-- Imagem 1 -->
-      <img src="imagem-inicial.jpg" alt="Mulher mexendo no celular" />
-
-      <p><strong>Valor: R$ 47</strong></p>
-
-      <a href="#" class="btn">QUERO COMEÇAR AGORA</a>
-
-      <p style="margin-top:15px; font-size:13px;">Conteúdo educativo. Resultados dependem da dedicação individual.</p>
+      <a href="#inicio" class="brand">Deborah Rodrigues de Souza</a>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#conteudo">Conteúdo</a>
+        <a href="#quem-sou">Quem sou eu</a>
+        <a href="#garantia">Garantia</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="#termos">Termos</a>
+      </nav>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>O que você vai aprender</h2>
-
-      <div class="box">
-        ✔️ Introdução ao mercado digital
+  </header>  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Ebook digital em PDF • acesso após confirmação do pagamento</div>
+          <h1>Um guia introdutório para mulheres e mães que querem conhecer o mercado digital com mais clareza usando o celular.</h1>
+          <p>
+            Este ebook foi pensado para quem deseja entender melhor o mercado digital e o marketing de afiliados de forma simples, direta e responsável, sem promessas irreais.
+          </p>
+          <p>
+            Você receberá um <span class="highlight">ebook em formato PDF</span>, com <span class="highlight">acesso após a confirmação do pagamento</span>, por meio do seu e-mail ou da área de membros da plataforma responsável pela entrega.
+          </p><div class="notice">
+        <strong>Importante:</strong> este conteúdo tem finalidade educativa e informativa. Não há promessa de ganhos, lucro garantido ou resultados imediatos. O aproveitamento depende do contexto, da dedicação, da aplicação do conteúdo e de fatores individuais.
       </div>
 
-      <div class="box">
-        ✔️ Como funciona o marketing de afiliados
-      </div>
-
-      <div class="box">
-        ✔️ Como começar usando apenas o celular
-      </div>
-
-      <div class="box">
-        ✔️ Organização para quem tem pouco tempo
+      <div class="cta-row">
+        <a href="https://pay.kiwify.com.br/hMix979" class="btn" target="_blank" rel="noopener noreferrer">QUERO GARANTIR MEU ACESSO</a>
+        <div class="price-box">
+          <div class="price-label">Valor único</div>
+          <div class="price">R$ 47</div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
+    <div class="hero-image">
+      <img src="https://i.postimg.cc/6W4wsHvd/b6bcda1d0d23b9c7fca28609730fc95e.jpg" alt="Mulher mexendo no celular" />
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <div class="container">
+    <h2>Sobre este material</h2>
+    <p>
+      Este produto digital foi desenvolvido para oferecer uma visão inicial sobre possibilidades dentro do mercado digital, especialmente para quem está começando e quer compreender melhor o marketing de afiliados.
+    </p>
+    <div class="cards">
+      <article class="card">
+        <h3>Conteúdo introdutório</h3>
+        <p>Uma explicação acessível para iniciantes, sem linguagem complicada e com foco em entendimento prático.</p>
+      </article>
+      <article class="card">
+        <h3>Leitura adaptada ao celular</h3>
+        <p>O material foi pensado para quem consome conteúdo digital pelo celular e precisa de objetividade.</p>
+      </article>
+      <article class="card">
+        <h3>Comunicação responsável</h3>
+        <p>Sem promessas de renda garantida, com informações claras sobre a proposta do ebook.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="conteudo">
+  <div class="container split">
+    <div>
+      <h2>O que você vai encontrar no ebook</h2>
+      <p>
+        O conteúdo foi organizado para ajudar quem deseja começar entendendo o básico antes de investir tempo em estratégias mais avançadas.
+      </p>
+      <ul class="topic-list">
+        <li><span class="highlight">1. Introdução ao mercado digital:</span> visão inicial sobre o ambiente online e possibilidades de atuação.</li>
+        <li><span class="highlight">2. Noções de marketing de afiliados:</span> entendimento do conceito e do papel do afiliado.</li>
+        <li><span class="highlight">3. Como começar usando o celular:</span> adaptação para quem utiliza principalmente o celular na rotina.</li>
+        <li><span class="highlight">4. Organização para quem tem pouco tempo:</span> direcionamento para mães e mulheres com rotina corrida.</li>
+        <li><span class="highlight">5. Cuidados ao iniciar:</span> atenção com expectativas, constância e responsabilidade.</li>
+        <li><span class="highlight">6. Visão prática para iniciantes:</span> compreensão de etapas iniciais antes de avançar.</li>
+        <li><span class="highlight">7. Clareza sobre o processo:</span> conteúdo pensado para reduzir dúvidas e ajudar no entendimento do começo da jornada.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Para quem este ebook é indicado</h3>
+      <ul class="check-list">
+        <li>Mulheres que desejam conhecer melhor o mercado digital.</li>
+        <li>Mães que buscam aprender novas possibilidades online.</li>
+        <li>Iniciantes que preferem um conteúdo introdutório e claro.</li>
+        <li>Pessoas que valorizam explicação simples, objetiva e responsável.</li>
+      </ul>
+
+      <div class="note">
+        Este material não substitui estudo contínuo, consultoria individual ou treinamento avançado. Trata-se de um ebook introdutório, com proposta educativa.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quem-sou">
+  <div class="container split">
+    <div class="about-image">
+      <img src="https://i.postimg.cc/dsZvMWyh/f6f3db5c9670905f5cdd6daa5be84cbc.jpg" alt="Mulher de salto sentada de costas" />
+    </div>
+
+    <div>
       <h2>Quem sou eu</h2>
-
-      <!-- Imagem 2 -->
-      <img src="imagem-quem-sou.jpg" alt="Mulher de salto sentada de costas" style="width:100%; max-width:400px; border-radius:20px; margin-top:20px;">
-
-      <div class="box">
-        <p><strong>Deborah Rodrigues de Souza</strong></p>
-        <p>Sou mãe de dois e aprendi, na prática, a buscar novas formas de renda através do celular.</p>
-        <p>Criei este ebook para ajudar outras mulheres que querem começar, mas não sabem por onde ir.</p>
-        <p>Este conteúdo é introdutório e tem como objetivo orientar com clareza e responsabilidade.</p>
-      </div>
+      <p>
+        Meu nome é <span class="highlight">Deborah Rodrigues de Souza</span>. Sou mãe de dois e construí minha experiência buscando entender, na prática, novas possibilidades dentro do mercado digital usando principalmente o celular.
+      </p>
+      <p>
+        Ao longo da minha jornada, fui estudando o ambiente digital, conhecendo melhor o marketing de afiliados e aprendendo a organizar esse conhecimento de forma mais clara e acessível.
+      </p>
+      <p>
+        Este ebook nasceu da minha vivência e da vontade de reunir informações introdutórias que possam ajudar outras mulheres e mães a compreenderem melhor esse universo com mais direção, sem exageros e com responsabilidade.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Garantia</h2>
-      <div class="box">
-        <p><strong>7 dias de garantia</strong></p>
-        <p>Se não estiver satisfeita, você pode solicitar reembolso dentro do prazo.</p>
-      </div>
+<section class="section" id="garantia">
+  <div class="container">
+    <div class="guarantee">
+      <strong>Garantia de 7 dias</strong>
+      <p>
+        Após a confirmação da compra, você terá o prazo de 7 dias corridos para solicitar reembolso, conforme as regras da plataforma de pagamento utilizada no checkout.
+      </p>
+      <p class="small">
+        Recomendamos verificar as orientações da plataforma para formalizar corretamente qualquer solicitação dentro do prazo.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
+<section class="section" id="comprar">
+  <div class="container">
+    <div class="card" style="text-align:center;">
+      <h2>Adquira seu acesso</h2>
+      <p>
+        Produto digital em PDF, com entrega após a confirmação do pagamento. Valor do ebook: <span class="highlight">R$ 47</span>.
+      </p>
+      <a href="https://pay.kiwify.com.br/hMix979" class="btn" target="_blank" rel="noopener noreferrer">COMPRAR AGORA</a>
+      <p class="small" style="margin-top:14px;">
+        A compra é processada por plataforma terceirizada, podendo haver envio por e-mail ou liberação na área de membros da plataforma.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container legal-grid">
+    <article class="card" id="privacidade">
       <h2>Política de Privacidade</h2>
-      <div class="box">
-        <p>Seus dados são protegidos e utilizados apenas para comunicação e entrega do produto.</p>
-      </div>
+      <p>
+        Esta página pode coletar informações fornecidas voluntariamente pela usuária, como nome, e-mail, telefone e demais dados necessários para atendimento, comunicação, suporte e processamento da compra.
+      </p>
+      <p>
+        Os dados poderão ser utilizados para entrega do produto digital, contato relacionado à compra, suporte ao cliente, envio de informações essenciais sobre o produto e cumprimento de obrigações legais, quando aplicável.
+      </p>
+      <p>
+        Este site pode utilizar <span class="highlight">cookies</span> e tecnologias semelhantes para melhorar a navegação, analisar acessos e apoiar o funcionamento da página.
+      </p>
+      <p>
+        Informações necessárias para o pagamento e entrega podem ser compartilhadas com plataformas e serviços essenciais à operação, incluindo a <span class="highlight">Kiwify</span> e demais ferramentas técnicas envolvidas no processo de checkout, entrega e suporte.
+      </p>
+      <p>
+        Os dados não são comercializados. A titular poderá solicitar informações sobre tratamento de dados, quando cabível, por meio do e-mail informado nesta página.
+      </p>
+    </article>
 
+    <article class="card" id="termos">
       <h2>Termos de Uso</h2>
-      <div class="box">
-        <p>Produto digital. Uso individual. Não é permitida revenda ou distribuição.</p>
-        <p>Não há promessa de ganhos.</p>
-      </div>
+      <p>
+        Ao adquirir este ebook, a compradora recebe uma licença de uso pessoal e individual do conteúdo. Não é permitida a reprodução, revenda, cópia integral, redistribuição ou compartilhamento não autorizado do material.
+      </p>
+      <p>
+        Este produto possui finalidade educativa e informativa. <span class="highlight">Não garantimos resultados financeiros</span>, faturamento específico, lucro, retorno imediato ou qualquer desempenho individual.
+      </p>
+      <p>
+        O uso das informações apresentadas é de responsabilidade da própria usuária. <span class="highlight">A aplicação do conteúdo e seus efeitos dependem do contexto, dedicação, interpretação e execução individual.</span>
+      </p>
+      <p>
+        O prazo de garantia e reembolso seguirá as condições aplicáveis à plataforma de pagamento utilizada. Ao concluir a compra, a usuária declara que leu as informações principais desta página antes de adquirir o produto.
+      </p>
+    </article>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container">
+      <p><strong>Responsável pelo conteúdo:</strong> Deborah Rodrigues de Souza</p>
+      <p><strong>CPF:</strong> 147.041.896-78</p>
+      <p><strong>E-mail:</strong> suporte.rendadigitaloficiaal@gmail.com</p>
+      <p class="small">
+        Este site apresenta um produto digital com proposta introdutória. Recomenda-se leitura completa das informações, política de privacidade e termos de uso antes da compra.
+      </p>
     </div>
-  </section>
-
-  <footer>
-    <p>Deborah Rodrigues de Souza</p>
-    <p>CPF: 147.041.896-78</p>
-    <p>Email: suporte.rendadigitaloficiaal@gmail.com</p>
   </footer>
-
 </body>
 </html>
