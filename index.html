@@ -1,657 +1,235 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-book | Guia Prático de Marketing Digital para Iniciantes</title>
-  <meta name="description" content="Aprenda os fundamentos do marketing digital e da divulgação online com um guia prático, claro e pensado para iniciantes." />
-  <style>
-    :root {
-      --bg: #fff8fb;
-      --surface: #ffffff;
-      --surface-soft: #fff1f6;
-      --text: #1f2940;
-      --muted: #667085;
-      --primary: #e94b86;
-      --primary-dark: #c93d71;
-      --accent: #16a34a;
-      --border: #f0d7e2;
-      --shadow: 0 18px 45px rgba(31, 41, 64, 0.10);
-      --radius: 22px;
-      --max: 1140px;
-    }* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top left, #ffe6f0 0, transparent 30%),
-    radial-gradient(circle at top right, #ffeef5 0, transparent 28%),
-    var(--bg);
-  line-height: 1.6;
-}
-
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
-
-.container {
-  width: min(var(--max), calc(100% - 32px));
-  margin: 0 auto;
-}
-
-.topbar {
-  background: #fff;
-  border-bottom: 1px solid rgba(233, 75, 134, 0.10);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-}
-
-.topbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 0;
-}
-
-.brand {
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.brand span { color: var(--primary); }
-
-.nav {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 24px;
-  border-radius: 999px;
-  border: 0;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  transition: 0.25s ease;
-  text-align: center;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), #ff6ea6);
-  color: white;
-  box-shadow: 0 14px 30px rgba(233, 75, 134, 0.25);
-}
-
-.btn-primary:hover { transform: translateY(-1px); }
-
-.btn-secondary {
-  background: white;
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.hero {
-  padding: 72px 0 42px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: var(--surface-soft);
-  color: var(--primary-dark);
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 18px;
-}
-
-h1, h2, h3 { line-height: 1.2; margin: 0 0 14px; }
-h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
-h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
-h3 { font-size: 1.2rem; }
-
-.hero p.lead {
-  font-size: 1.08rem;
-  color: var(--muted);
-  margin: 0 0 24px;
-  max-width: 60ch;
-}
-
-.hero-points {
-  display: grid;
-  gap: 10px;
-  margin: 0 0 28px;
-  padding: 0;
-  list-style: none;
-}
-
-.hero-points li,
-.check-list li,
-.faq details,
-.mini-card,
-.card,
-.price-card,
-.author-card,
-.legal-card,
-.contact-card,
-.guarantee,
-.quote {
-  background: var(--surface);
-  border: 1px solid rgba(233, 75, 134, 0.10);
-  box-shadow: var(--shadow);
-}
-
-.hero-points li {
-  padding: 14px 16px;
-  border-radius: 16px;
-}
-
-.cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.notice {
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.price-card {
-  padding: 28px;
-  border-radius: var(--radius);
-  position: relative;
-  overflow: hidden;
-}
-
-.price-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 8px;
-  background: linear-gradient(90deg, var(--primary), #ff7ab0);
-}
-
-.price-tag {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: var(--primary-dark);
-  margin: 8px 0;
-}
-
-.muted { color: var(--muted); }
-
-section {
-  padding: 32px 0;
-}
-
-.section-head {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 28px;
-}
-
-.grid-3,
-.grid-2,
-.testimonials,
-.footer-grid {
-  display: grid;
-  gap: 22px;
-}
-
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.testimonials { grid-template-columns: repeat(3, 1fr); }
-.footer-grid { grid-template-columns: 1.2fr 0.8fr; }
-
-.card,
-.quote,
-.author-card,
-.legal-card,
-.contact-card,
-.guarantee {
-  border-radius: var(--radius);
-  padding: 24px;
-}
-
-.icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface-soft);
-  color: var(--primary-dark);
-  font-size: 1.35rem;
-  margin-bottom: 14px;
-}
-
-.check-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.check-list li {
-  padding: 16px 18px;
-  border-radius: 16px;
-}
-
-.check { color: var(--accent); font-weight: bold; margin-right: 8px; }
-
-.quote p { margin-top: 0; }
-.quote strong { display: block; margin-top: 12px; }
-
-.author-card {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 18px;
-  align-items: start;
-}
-
-.avatar {
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ffd4e5, #ffc4da);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--primary-dark);
-}
-
-.guarantee {
-  border: 1px solid rgba(22, 163, 74, 0.22);
-  background: linear-gradient(180deg, #ffffff, #f7fff9);
-  text-align: center;
-}
-
-.faq {
-  display: grid;
-  gap: 14px;
-}
-
-.faq details {
-  padding: 18px 20px;
-  border-radius: 18px;
-}
-
-.faq summary {
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.faq p { margin: 12px 0 0; color: var(--muted); }
-
-.offer-box {
-  background: linear-gradient(135deg, #fff, #fff3f8);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.small {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.footer {
-  padding: 28px 0 48px;
-}
-
-.legal-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.disclaimer {
-  margin-top: 18px;
-  font-size: 0.9rem;
-  color: var(--muted);
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px;
-}
-
-.badge-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
-.badge {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.highlight {
-  color: var(--primary-dark);
-  font-weight: 700;
-}
-
-@media (max-width: 980px) {
-  .hero-grid,
-  .grid-3,
-  .grid-2,
-  .testimonials,
-  .footer-grid,
-  .author-card {
-    grid-template-columns: 1fr;
-  }
-
-  .topbar-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero { padding-top: 42px; }
-  .btn { width: 100%; }
-  .cta-row { flex-direction: column; }
-  .price-card { padding: 22px; }
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Renda Digital | Deborah Rodrigues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A2C40',
+                        secondary: '#F8F5F1',
+                        dark: '#1A1A1A',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .gold-border {
+                border: 2px solid #D4AF37;
+            }
+            .bg-guarantee {
+                background: radial-gradient(circle, #222 0%, #000 100%);
+            }
+            .premium-shadow {
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
 </head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">Sua<span>Marca</span> Digital</div>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#beneficios">Benefícios</a>
-        <a href="#conteudo">Conteúdo</a>
-        <a href="#autora">Autora</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-    </div>
-  </header>  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Guia digital para iniciantes</div>
-          <h1>Aprenda marketing digital de forma clara, organizada e possível para a sua rotina</h1>
-          <p class="lead">
-            Um e-book prático para quem deseja entender os fundamentos da divulgação online,
-            conhecer o mercado de afiliados e começar com mais clareza, planejamento e responsabilidade.
-          </p><ul class="hero-points">
-        <li>Conteúdo introdutório, explicado em linguagem simples.</li>
-        <li>Foco em organização, divulgação e primeiros passos no digital.</li>
-        <li>Material pensado para quem precisa conciliar estudos, casa e família.</li>
-      </ul>
+<body class="font-sans text-dark bg-white">
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#oferta">Quero ver a oferta</a>
-        <a class="btn btn-secondary" href="#conteudo">Ver conteúdo do e-book</a>
-      </div>
+    <!-- HERO SECTION -->
+    <section class="py-16 px-4 bg-secondary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2 text-center md:text-left space-y-6">
+                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold leading-tight text-dark text-shadow">
+                    Transforme sua <span class="text-primary">Renda e sua Vida</span><br>usando apenas o celular
+                </h1>
+                <p class="text-lg text-gray-700">
+                    Um método estratégico para mães e pessoas que buscam liberdade financeira e tempo para família através do Marketing Digital.
+                </p>
+                
+                <!-- PREÇO DESTAQUE -->
+                <div class="bg-white p-4 rounded-xl inline-block premium-shadow border border-gray-100">
+                    <p class="text-sm text-gray-500">Por apenas</p>
+                    <p class="text-4xl font-bold text-primary">R$47<sup class="text-lg">,00</sup></p>
+                </div>
 
-      <p class="notice">
-        Este material tem caráter educacional e informativo. Resultados variam conforme dedicação,
-        experiência, contexto e aplicação do conteúdo.
-      </p>
-    </div>
+                <a href="https://pay.kiwify.com.br/hMix979" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-5 px-12 rounded-lg text-xl shadow-lg transition-all transform hover:scale-105">
+                    QUERO GARANTIR O MEU GUIA
+                </a>
+                <p class="text-sm text-gray-500 mt-2">Conteúdo 100% Digital | Acesso Imediato</p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://i.imgur.com/ykRgQZL.jpg" alt="Mulher trabalhando pelo celular" class="rounded-2xl w-full max-w-md premium-shadow mx-auto">
+            </div>
+        </div>
+    </section>
 
-    <aside class="price-card" aria-label="Oferta principal">
-      <p class="muted"><strong>E-book digital</strong></p>
-      <h2>Guia Prático de Marketing Digital para Iniciantes</h2>
-      <p class="muted">
-        Ideal para quem quer entender estratégias básicas, escolher nichos com mais critério
-        e organizar a divulgação de produtos digitais.
-      </p>
-      <div class="price-tag">R$ 27,90</div>
-      <p class="muted">Pagamento único • Acesso digital • Atualizações futuras conforme disponibilidade</p>
-      <div class="badge-row">
-        <span class="badge">Acesso imediato após confirmação</span>
-        <span class="badge">Garantia de 7 dias</span>
-        <span class="badge">Entrega 100% online</span>
-      </div>
-      <div style="margin-top:22px;">
-        <a class="btn btn-primary" href="#" rel="nofollow">Comprar agora</a>
-      </div>
-    </aside>
-  </div>
-</section>
+    <!-- O QUE VOCÊ VAI APRENDER -->
+    <section class="py-16 px-4 bg-white" id="conteudo">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">O que você vai aprender no Guia?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-secondary p-6 rounded-xl premium-shadow">
+                    <h3 class="font-bold text-xl mb-3 text-primary">📱 Fundamentos do Mercado Digital</h3>
+                    <p>Entenda como funciona o ambiente online e as principais oportunidades para quem quer começar do zero.</p>
+                </div>
+                <div class="bg-secondary p-6 rounded-xl premium-shadow">
+                    <h3 class="font-bold text-xl mb-3 text-primary">🚀 Estratégias de Marketing de Afiliados</h3>
+                    <p>Aprenda a escolher produtos e usar técnicas de divulgação que realmente funcionam para atrair pessoas interessadas.</p>
+                </div>
+                <div class="bg-secondary p-6 rounded-xl premium-shadow">
+                    <h3 class="font-bold text-xl mb-3 text-primary">🧠 Mentalidade e Organização</h3>
+                    <p>Desenvolva a mentalidade necessária para construir um negócio online consistente e organize sua rotina de forma produtiva.</p>
+                </div>
+                <div class="bg-secondary p-6 rounded-xl premium-shadow">
+                    <h3 class="font-bold text-xl mb-3 text-primary">📈 Crescimento Sustentável</h3>
+                    <p>Direcionamento claro sobre como estudar, aplicar e evoluir dentro do mercado digital de maneira realista.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="beneficios">
-  <div class="container">
-    <div class="section-head">
-      <h2>Por que esta página é mais segura para anunciar</h2>
-      <p class="muted">
-        O foco aqui está em educação, transparência, conteúdo explicado e linguagem moderada,
-        sem promessas irreais ou garantias de ganhos.
-      </p>
-    </div>
+    <!-- PARA QUEM É / NÃO É -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+            <div class="bg-green-50 p-8 rounded-xl border border-green-100 premium-shadow">
+                <h3 class="text-2xl font-bold text-green-700 mb-4">✅ Este Guia é para você se:</h3>
+                <ul class="space-y-3 text-green-800">
+                    <li>• Quer entender de verdade como funciona o Marketing Digital.</li>
+                    <li>• Busca conhecimento para desenvolver uma nova fonte de renda.</li>
+                    <li>• É iniciante e quer começar de forma organizada e segura.</li>
+                    <li>• Valoriza o investimento em educação e desenvolvimento pessoal.</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 p-8 rounded-xl border border-red-100 premium-shadow">
+                <h3 class="text-2xl font-bold text-red-700 mb-4">❌ Não é para você se:</h3>
+                <ul class="space-y-3 text-red-800">
+                    <li>• Espera resultados milagrosos ou ganhos sem esforço.</li>
+                    <li>• Não está disposto a estudar e aplicar o conhecimento.</li>
+                    <li>• Quer fórmulas mágicas que não existem.</li>
+                    <li>• Não tem interesse em aprender sobre empreendedorismo digital.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <div class="grid-3">
-      <article class="card">
-        <div class="icon">✓</div>
-        <h3>Linguagem responsável</h3>
-        <p class="muted">Texto orientado para aprendizado e não para promessa de enriquecimento rápido.</p>
-      </article>
-      <article class="card">
-        <div class="icon">🔒</div>
-        <h3>Mais transparência</h3>
-        <p class="muted">Espaço para dados da empresa, política, contato, garantia e informações do produto.</p>
-      </article>
-      <article class="card">
-        <div class="icon">📘</div>
-        <h3>Oferta mais completa</h3>
-        <p class="muted">Explica o que a pessoa vai receber, para quem o material é indicado e quais são seus limites.</p>
-      </article>
-    </div>
-  </div>
-</section>
+    <!-- SOBRE A AUTORA -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Quem compartilha esse conteúdo?</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10 bg-secondary p-8 rounded-2xl premium-shadow">
+                <div class="md:w-1/3">
+                     <img src="https://i.imgur.com/4nqXgZZ.jpg" alt="Deborah Rodrigues" class="rounded-2xl w-full premium-shadow mx-auto">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left space-y-4">
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Olá! Eu sou a <strong class="text-primary">Deborah Rodrigues de Souza</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Assim como você, eu sou mãe de dois filhos e sei como é desafiador conciliar os cuidados com a família com a necessidade de gerar renda.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital e Marketing de Afiliados. Hoje, compartilho esse conhecimento para ajudar outras mulheres a conquistarem mais autonomia e qualidade de vida através da internet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="conteudo">
-  <div class="container grid-2">
-    <div>
-      <h2>O que você encontra dentro do e-book</h2>
-      <p class="muted">
-        Estrutura sugerida para apresentar valor real e passar mais credibilidade ao visitante.
-      </p>
-      <ul class="check-list">
-        <li><span class="check">✔</span><span class="highlight">Introdução ao marketing digital</span><br>Conceitos básicos para quem está começando do zero.</li>
-        <li><span class="check">✔</span><span class="highlight">Mercado de afiliados para iniciantes</span><br>Como funciona, quais cuidados ter e como avaliar produtos.</li>
-        <li><span class="check">✔</span><span class="highlight">Organização da rotina</span><br>Sugestões práticas para estudar e produzir com mais constância.</li>
-        <li><span class="check">✔</span><span class="highlight">Divulgação online</span><br>Noções básicas de conteúdo, posicionamento e divulgação responsável.</li>
-        <li><span class="check">✔</span><span class="highlight">Modelos e exemplos</span><br>Exemplos de posts, organização e planejamento inicial.</li>
-      </ul>
-    </div>
+    <!-- GARANTIA E SEGURANÇA -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Sua Compra é 100% Segura e com Garantia</h2>
+            <div class="bg-white p-8 rounded-2xl premium-shadow">
+                <div class="flex justify-center mb-6">
+                    <div class="bg-guarantee text-gold gold-border rounded-full w-48 h-48 flex flex-col items-center justify-center shadow-2xl relative">
+                        <i class="fas fa-star absolute top-4 left-4 text-gold opacity-80"></i>
+                        <i class="fas fa-star absolute top-4 right-4 text-gold opacity-80"></i>
+                        <i class="fas fa-star absolute bottom-4 left-5 text-gold opacity-80"></i>
+                        <i class="fas fa-star absolute bottom-4 right-5 text-gold opacity-80"></i>
+                        
+                        <i class="fas fa-shield-alt text-4xl mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight">GARANTIA</h3>
+                        <h3 class="font-bold text-2xl leading-tight">7 DIAS</h3>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">Satisfação Garantida ou Seu Dinheiro de Volta</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Nós confiamos tanto na qualidade do nosso material que oferecemos uma garantia incondicional de <strong>7 DIAS</strong>. 
+                    Você adquire o Guia, estuda o conteúdo e se, dentro desse período, decidir que não é para você ou não gostar do material, 
+                    basta entrar em contato que <strong>devolvemos 100% do seu dinheiro</strong>, sem burocracia e sem perguntas.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <div>
-      <div class="card">
-        <h3>Para quem este material é indicado</h3>
-        <p class="muted">Para iniciantes que desejam aprender fundamentos do digital e buscam um material direto, introdutório e acessível.</p>
-      </div>
-      <div class="card" style="margin-top: 18px;">
-        <h3>O que este material não promete</h3>
-        <p class="muted">Não promete ganhos garantidos, retorno imediato, resultados padronizados nem enriquecimento rápido.</p>
-      </div>
-      <div class="card" style="margin-top: 18px;">
-        <h3>Formato de entrega</h3>
-        <p class="muted">Produto digital em formato de e-book, com acesso online ou arquivo liberado após confirmação do pagamento, conforme sua plataforma de venda.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- PERGUNTAS FREQUENTES -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="bg-secondary p-5 rounded-lg premium-shadow">
+                    <h4 class="font-bold">💻 Preciso ter conhecimento prévio?</h4>
+                    <p class="text-gray-600">Não. O material foi pensado para iniciantes, explicando os conceitos de forma clara, objetiva e passo a passo.</p>
+                </div>
+                <div class="bg-secondary p-5 rounded-lg premium-shadow">
+                    <h4 class="font-bold">📱 Funciona apenas no celular?</h4>
+                    <p class="text-gray-600">Sim! As estratégias abordadas visam o uso de ferramentas acessíveis via celular, permitindo que você estude e aplique de onde estiver.</p>
+                </div>
+                <div class="bg-secondary p-5 rounded-lg premium-shadow">
+                    <h4 class="font-bold">⏳ Por quanto tempo terei acesso?</h4>
+                    <p class="text-gray-600">O acesso ao material digital é vitalício, permitindo que você estude no seu próprio ritmo e revise o conteúdo sempre que precisar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <div class="container">
-    <div class="section-head">
-      <h2>Depoimentos e prova social</h2>
-      <p class="muted">Use somente depoimentos verdadeiros, autorizados e que não façam promessas de renda.</p>
-    </div>
+    <!-- CTA FINAL -->
+    <section id="comprar" class="py-16 px-4 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-4xl font-bold">Não perca mais tempo! Invista em seu conhecimento!</h2>
+            <p class="text-xl opacity-90">Adquira agora e comece a estudar estratégias para mudar sua realidade.</p>
 
-    <div class="testimonials">
-      <article class="quote">
-        <p>“O material me ajudou a entender melhor os primeiros passos e a organizar minhas ideias com mais calma.”</p>
-        <strong>Nome da cliente</strong>
-        <span class="small">Cidade • Leitora do e-book</span>
-      </article>
-      <article class="quote">
-        <p>“Gostei da linguagem simples. Consegui finalmente entender os conceitos sem me sentir perdida.”</p>
-        <strong>Nome da cliente</strong>
-        <span class="small">Cidade • Leitora do e-book</span>
-      </article>
-      <article class="quote">
-        <p>“A parte de organização da rotina foi a que mais me ajudou, porque consigo estudar no meu tempo.”</p>
-        <strong>Nome da cliente</strong>
-        <span class="small">Cidade • Leitora do e-book</span>
-      </article>
-    </div>
-  </div>
-</section>
+            <!-- BOTÃO DE COMPRA -->
+            <div class="pt-4">
+                <a href="https://pay.kiwify.com.br/hMix979" class="inline-block bg-gold text-primary font-bold py-5 px-16 rounded-lg text-xl shadow-2xl hover:bg-gold/90 transition-all transform hover:scale-105">
+                    QUERO ACESSAR O GUIA AGORA
+                </a>
+            </div>
+            <p class="text-sm opacity-80 mt-4">Pagamento 100% Seguro | Satisfação Garantida</p>
+        </div>
+    </section>
 
-<section id="autora">
-  <div class="container grid-2">
-    <div class="author-card">
-      <div class="avatar">SM</div>
-      <div>
-        <h2>Sobre a autora</h2>
-        <p class="muted">
-          Olá, eu sou <strong>Seu Nome</strong>. Criei este material com foco em clareza e praticidade para ajudar iniciantes a entenderem melhor o universo do marketing digital.
-        </p>
-        <p class="muted">
-          Minha proposta com este e-book é reunir orientações introdutórias, organização e exemplos simples para facilitar os primeiros passos de quem deseja aprender com mais segurança.
-        </p>
-      </div>
-    </div>
+    <!-- RODAPÉ -->
+    <footer class="bg-dark text-white py-10 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-6 space-y-2">
+                <p>&copy; 2025 - Deborah Rodrigues de Souza</p>
+                <p>CPF: 147.041.896.78</p>
+                <p>E-mail: suporte.rendadigitaloficiaal@gmail.com</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="#politica" class="hover:text-gold transition-colors">Política de Privacidade</a>
+                <a href="#termos" class="hover:text-gold transition-colors">Termos de Uso</a>
+            </div>
+            <p class="text-center text-xs mt-6 text-gray-400">
+                *Este produto é destinado para fins educacionais e de capacitação. Resultados variam de acordo com a aplicação, dedicação e realidade de cada indivíduo.
+            </p>
+        </div>
+    </footer>
 
-    <div class="card">
-      <h3>Diferenciais da sua oferta</h3>
-      <ul class="check-list">
-        <li><span class="check">✔</span>Explicação didática e objetiva.</li>
-        <li><span class="check">✔</span>Conteúdo introdutório para quem está começando.</li>
-        <li><span class="check">✔</span>Linguagem acessível e acolhedora.</li>
-        <li><span class="check">✔</span>Estrutura pensada para transmitir credibilidade.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="guarantee">
-      <h2>Garantia de 7 dias</h2>
-      <p class="muted">
-        Se o conteúdo não fizer sentido para você dentro do prazo legal/informado pela plataforma,
-        solicite o reembolso conforme as regras da sua venda.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="oferta">
-  <div class="container">
-    <div class="offer-box">
-      <h2>Comece pelo conhecimento, não pela promessa</h2>
-      <p class="muted">
-        Este e-book foi desenvolvido para apresentar fundamentos e orientações iniciais sobre marketing digital e divulgação online.
-      </p>
-      <div class="price-tag">R$ 27,90</div>
-      <p class="small">Compra segura • Produto digital • Entrega após confirmação do pagamento</p>
-      <div class="cta-row" style="justify-content:center; margin-top:18px;">
-        <a class="btn btn-primary" href="#" rel="nofollow">Acessar página de pagamento</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Este e-book garante resultados financeiros?</summary>
-        <p>Não. O material é educacional. Resultados variam de pessoa para pessoa e dependem de fatores como dedicação, experiência, nicho, aplicação e contexto.</p>
-      </details>
-      <details>
-        <summary>O conteúdo é para iniciantes?</summary>
-        <p>Sim. A proposta é apresentar fundamentos do marketing digital e da divulgação online em linguagem simples e organizada.</p>
-      </details>
-      <details>
-        <summary>Como recebo o material?</summary>
-        <p>Após a confirmação do pagamento, o acesso é liberado conforme a plataforma que você utilizar para a entrega do produto digital.</p>
-      </details>
-      <details>
-        <summary>Posso pedir reembolso?</summary>
-        <p>Sim, conforme a política da plataforma de pagamento utilizada e o prazo informado na sua oferta.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-  </main>  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="legal-card">
-        <h3>Informações legais e transparência</h3>
-        <p class="muted"><strong>Razão social / Nome:</strong> [Preencher]</p>
-        <p class="muted"><strong>CNPJ ou CPF:</strong> [Preencher com dado real]</p>
-        <p class="muted"><strong>Cidade / Estado:</strong> [Preencher]</p>
-        <p class="muted"><strong>E-mail de atendimento:</strong> contato@seudominio.com</p>
-        <p class="muted"><strong>Horário de atendimento:</strong> Segunda a sexta, das 9h às 18h</p><div class="legal-links">
-      <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-      <a href="/termos-de-uso.html">Termos de Uso</a>
-      <a href="/politica-de-reembolso.html">Política de Reembolso</a>
-      <a href="/contato.html">Contato</a>
-    </div>
-
-    <div class="disclaimer">
-      <strong>Aviso importante:</strong> Este produto não oferece promessa de ganhos garantidos.
-      Os resultados dependem de fatores individuais e do contexto de cada pessoa. O conteúdo tem finalidade educacional e informativa.
-    </div>
-  </div>
-
-  <div class="contact-card">
-    <h3>Antes de anunciar</h3>
-    <ul class="check-list">
-      <li><span class="check">✔</span>Troque todos os dados fictícios por dados reais.</li>
-      <li><span class="check">✔</span>Crie páginas reais para política, termos e contato.</li>
-      <li><span class="check">✔</span>Use checkout confiável e domínio próprio, se possível.</li>
-      <li><span class="check">✔</span>Evite promessas como “ganhe dinheiro rápido”.</li>
-      <li><span class="check">✔</span>Submeta a página para revisão somente após revisar tudo.</li>
-    </ul>
-  </div>
-</div>
-
-  </footer>
-</body>
-</html>
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <section id="politica" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Política de Privacidade</h2>
+            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4 premium-shadow">
+                <p>A sua privacidade é importante para nós. É política do Guia Renda Digital respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site.</p>
+                <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
+                <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p
