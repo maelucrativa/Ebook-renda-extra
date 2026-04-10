@@ -3,128 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renda Extra Para Mães | Mercado Digital e Afiliados</title>
-    <!-- Meta Tags Google Ads -->
-    <meta name="description" content="E-book completo para mães e mulheres aprenderem mercado digital e afiliados. Renda extra flexível, sem sair de casa. Acesso imediato!">
-    <meta name="keywords" content="renda extra para mães, trabalhar como afiliada, mercado digital iniciante, ganhar dinheiro em casa">
-    <meta name="author" content="Mãe Lucrativa">
-    
-    <!-- Google Ads Política Conformidade -->
-    <meta name="googlebot" content="index, follow">
-    <meta name="rating" content="general">
-    
+    <title>Guia de Renda Digital | Débora Rodrigues</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#E85D75',
-                        secondary: '#F9A826',
-                        dark: '#2D3748',
-                        light: '#F7FAFC',
+                        primary: '#C9A8A5',
+                        secondary: '#F8F5F4',
+                        dark: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
 </head>
-<body class="bg-light text-dark font-sans">
-    <!-- Cabeçalho Simples -->
-    <header class="bg-primary text-white py-4 px-4 shadow-md">
-        <div class="container mx-auto text-center">
-            <h1 class="text-xl md:text-2xl font-bold">📖 E-book Renda Extra Para Mães</h1>
-            <p class="text-sm opacity-90">Aprenda Mercado Digital e Afiliados de Forma Simples</p>
+<body class="font-sans text-dark bg-white">
+
+    <!-- HERO SECTION -->
+    <section class="py-16 px-4 bg-secondary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2 text-center md:text-left space-y-6">
+                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold leading-tight text-dark">
+                    Descubra como <span class="text-primary">construir uma fonte de renda</span> usando apenas o celular
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Um método prático e estratégico para mães e pessoas que buscam mais liberdade financeira e tempo para a família.
+                </p>
+                <a href="#comprar" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg transition-all transform hover:scale-105">
+                    QUERO GARANTIR O MEU GUIA
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://i.imgur.com/9Z7X7ZL.png" alt="Débora Rodrigues" class="rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl mx-auto">
+            </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Conteúdo Principal - Foco em Conversão -->
-    <main class="py-8 px-4 max-w-3xl mx-auto">
-        <!-- Seção Oferta Clara -->
-        <section class="bg-white rounded-xl shadow-lg p-6 mb-8 text-center">
-            <h2 class="text-2xl font-bold mb-4">Comece a Sua Renda Extra Hoje Mesmo!</h2>
-            <p class="text-lg text-gray-700 mb-6">
-                Guia completo e prático feito especialmente para mães e mulheres que querem conquistar a independência financeira sem abrir mão da família.
+    <!-- SOBRE A AUTORA -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Quem está compartilhando esse conteúdo?</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                Olá! Eu sou a <strong>Débora Rodrigues de Souza</strong>. Assim como você, eu sou mãe e sei como é desafiador conciliar os cuidados com a família com a necessidade de gerar renda.
             </p>
-            
-            <div class="bg-primary/10 p-4 rounded-lg mb-6">
-                <p class="text-3xl font-bold text-primary">Apenas R$ 27,90</p>
-                <p class="text-gray-600 text-sm">Acesso Vitalício • Atualizações Gratuitas</p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital. Hoje, compartilho esse conhecimento para ajudar outras pessoas a conquistarem mais autonomia e qualidade de vida através da internet.
+            </p>
+        </div>
+    </section>
+
+    <!-- O QUE VOCÊ VAI RECEBER -->
+    <section class="py-16 px-4 bg-secondary" id="conteudo">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">O que você vai aprender no Guia?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-3 text-primary">📱 Fundamentos do Digital</h3>
+                    <p>Os conceitos básicos e essenciais para entender como funciona o mercado digital de forma profissional.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-3 text-primary">🚀 Estratégias Práticas</h3>
+                    <p>Passo a passo de métodos que podem ser aplicados no dia a dia, utilizando apenas o seu celular.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-3 text-primary">🧠 Mentalidade e Organização</h3>
+                    <p>Como organizar sua rotina e manter o foco para construir algo consistente sem negligenciar outras áreas da vida.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-3 text-primary">📈 Crescimento Sustentável</h3>
+                    <p>Direcionamento sobre como estudar, aplicar e evoluir dentro do mercado digital de maneira realista.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Botão Principal - Destaque -->
-            <a href="#comprar" class="block w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl mb-4">
-                🛒 QUERO COMPRAR AGORA
-            </a>
-            
-            <p class="text-sm text-gray-600">✅ Acesso imediato após a confirmação do pagamento</p>
-        </section>
-
-        <!-- Benefícios Simples -->
-        <section class="bg-white rounded-xl shadow-lg p-6 mb-8">
-            <h3 class="text-xl font-bold mb-5 text-center">O Que Você Vai Receber:</h3>
-            
-            <ul class="space-y-4">
-                <li class="flex items-center gap-3">
-                    <i class="fa fa-check-circle text-primary text-xl"></i>
-                    <span>📚 Passo a passo do Mercado Digital para iniciantes</span>
-                </li>
-                <li class="flex items-center gap-3">
-                    <i class="fa fa-check-circle text-primary text-xl"></i>
-                    <span>🤝 Como trabalhar como Afiliada e escolher produtos lucrativos</span>
-                </li>
-                <li class="flex items-center gap-3">
-                    <i class="fa fa-check-circle text-primary text-xl"></i>
-                    <span>⏰ Dicas de gestão de tempo para conciliar com os filhos</span>
-                </li>
-                <li class="flex items-center gap-3">
-                    <i class="fa fa-check-circle text-primary text-xl"></i>
-                    <span>📱 Estratégias de divulgação simples e gratuitas</span>
-                </li>
-                <li class="flex items-center gap-3">
-                    <i class="fa fa-check-circle text-primary text-xl"></i>
-                    <span>🎁 Bônus: Modelos prontos de postagens para usar hoje</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Garantia - Elemento Essencial para Google Ads -->
-        <section class="bg-white rounded-xl shadow-lg p-6 mb-8 border-2 border-green-200">
-            <div class="text-center">
-                <i class="fa fa-shield text-green-500 text-4xl mb-3"></i>
-                <h3 class="text-xl font-bold mb-2">Garantia Incondicional de 7 Dias</h3>
-                <p class="text-gray-700">Se você não gostar do conteúdo ou achar que não é para você, devolvemos 100% do seu dinheiro. Sem perguntas!</p>
+    <!-- PARA QUEM É / NÃO É -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+            <div class="bg-green-50 p-8 rounded-xl border border-green-100">
+                <h3 class="text-2xl font-bold text-green-700 mb-4">✅ Para quem é este Guia</h3>
+                <ul class="space-y-3 text-green-800">
+                    <li>• Para quem quer aprender conceitos reais de Marketing Digital.</li>
+                    <li>• Para mães e pessoas que buscam novas fontes de estudo e renda.</li>
+                    <li>• Para iniciantes que desejam começar de forma organizada.</li>
+                    <li>• Para quem valoriza conteúdo educativo e de qualidade.</li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Formulário/Link de Compra (substitua o link pelo seu) -->
-        <section id="comprar" class="bg-white rounded-xl shadow-lg p-6 mb-8 text-center">
-            <h3 class="text-xl font-bold mb-4">Estou Pronta Para Começar!</h3>
-            <a href="https://seu-link-de-pagamento-aqui.com" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl">
-                💳 ACESSAR PÁGINA DE PAGAMENTO
-            </a>
-            <p class="text-xs text-gray-500 mt-4">Ambiente seguro • Seus dados protegidos</p>
-        </section>
-
-        <!-- Informações Obrigatórias para Google Ads -->
-        <section class="bg-gray-50 rounded-lg p-6 text-sm text-gray-600">
-            <h4 class="font-bold mb-3">Informações Legais e Políticas</h4>
-            <div class="space-y-2">
-                <p><strong>Política de Privacidade:</strong> Seus dados são protegidos e usados apenas para processar o seu pedido. Não compartilhamos informações com terceiros.</p>
-                <p><strong>Direitos Autorais:</strong> Todo o conteúdo deste e-book é protegido por direitos autorais. Proibida a reprodução sem autorização.</p>
-                <p><strong>Resultados:</strong> Os resultados podem variar de pessoa para pessoa e dependem do seu empenho e dedicação.</p>
-                <p><strong>Atendimento:</strong> Dúvidas? Entre em contato: contato@maelucrativa.com.br</p>
-                <p><strong>CNPJ/CPF:</strong> 00.000.000/0000-00 | São Paulo - SP</p>
+            <div class="bg-red-50 p-8 rounded-xl border border-red-100">
+                <h3 class="text-2xl font-bold text-red-700 mb-4">❌ Não é para você se</h3>
+                <ul class="space-y-3 text-red-800">
+                    <li>• Você busca fórmulas mágicas ou ganhos garantidos.</li>
+                    <li>• Não está disposto a estudar e aplicar conhecimentos.</li>
+                    <li>• Quer resultados sem esforço ou dedicação.</li>
+                    <li>• Não tem interesse em aprender sobre o mundo digital.</li>
+                </ul>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Rodapé Simples -->
-    <footer class="bg-dark text-white py-6 px-4 text-center text-sm">
-        <p>&copy; 2026 Mãe Lucrativa - Todos os direitos reservados</p>
-        <p class="mt-2">Este site segue todas as políticas do Google Ads</p>
+    <!-- FAQ -->
+    <section class="py-16 px-4 bg-secondary">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="font-bold">💻 Preciso ter conhecimento prévio?</h4>
+                    <p class="text-gray-600">Não. O material foi pensado para iniciantes, explicando os conceitos de forma clara e objetiva.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="font-bold">📱 Funciona apenas no celular?</h4>
+                    <p class="text-gray-600">Sim! As estratégias abordadas visam o uso de ferramentas acessíveis que podem ser operadas via dispositivos móveis.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="font-bold">⏳ Por quanto tempo terei acesso?</h4>
+                    <p class="text-gray-600">O acesso ao material digital é vitalício, permitindo que você estude no seu próprio ritmo.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h4 class="font-bold">🛡️ Tenho garantia?</h4>
+                    <p class="text-gray-600">Sim. Você tem uma garantia incondicional de 7 dias. Se não gostar, devolvemos seu dinheiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="comprar" class="py-16 px-4 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h2 class="text-4xl font-bold">Pronto para investir no seu conhecimento?</h2>
+            <p class="text-xl">Adquira agora o Guia Renda Digital e comece a estudar estratégias para mudar sua realidade.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="LINK_DA_SUA_COMPRA_AQUI" class="bg-white text-primary font-bold py-4 px-12 rounded-lg text-xl shadow-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
+                    COMPRAR AGORA
+                </a>
+            </div>
+            <p class="text-sm opacity-80">Pagamento seguro | Acesso Imediato | Garantia de 7 Dias</p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-dark text-white py-10 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-6">
+                <p>&copy; 2025 - Débora Rodrigues de Souza</p>
+                <p>CPF: 147.041.089-78</p>
+                <p>E-mail: suporte.rendadigitaloficiaal@gmail.com</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="#politica" class="hover:underline">Política de Privacidade</a>
+                <a href="#termos" class="hover:underline">Termos de Uso</a>
+            </div>
+            <p class="text-center text-xs mt-6 text-gray-400">
+                *Este produto é destinado para fins educacionais e didáticos. Resultados variam de acordo com o esforço e aplicação de cada indivíduo.
+            </p>
+        </div>
     </footer>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <section id="politica" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Política de Privacidade</h2>
+            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4">
+                <p>A sua privacidade é importante para nós. É política do Guia Renda Digital respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site.</p>
+                <p>Solicitamos informações pessoais apenas para poder lhe fornecer um serviço ou produto, de forma legal e legítima. Fazemos isso com total transparência e respeito.</p>
+                <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei ou para cumprir obrigações legais.</p>
+                <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TERMOS DE USO -->
+    <section id="termos" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Termos de Uso</h2>
+            <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4">
+                <p>Ao acessar ou usar este site, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis.</p>
+                <p>O conteúdo apresentado neste site é para fins educacionais e informativos. Todo o material é protegido por leis de direitos autorais.</p>
+                <p>Não garantimos resultados financeiros. O sucesso nas áreas abordadas depende do empenho, dedicação e capacidade individual de cada aluno.</p>
+                <p>Reservamos o direito de modificar ou revisar estes termos a qualquer momento. Ao utilizar este site, você concorda em ficar vinculado à versão atual destes termos de serviço.</p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
