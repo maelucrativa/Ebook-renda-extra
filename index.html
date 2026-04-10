@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Renda Digital | Débora Rodrigues</title>
+    <title>Guia Renda Digital | Débora Rodrigues</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#B8869C',
-                        secondary: '#F9F5F7',
-                        dark: '#222222',
+                        primary: '#6D2932',
+                        secondary: '#F8F5F1',
+                        dark: '#1A1A1A',
+                        gold: '#D4AF37',
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -25,13 +27,13 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .text-shadow {
-                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             }
-            .content-auto {
-                content-visibility: auto;
+            .gold-border {
+                border: 2px solid #D4AF37;
             }
-            .gold-gradient {
-                background: linear-gradient(135deg, #D4AF37 0%, #F4E4C1 50%, #D4AF37 100%);
+            .bg-guarantee {
+                background: radial-gradient(circle, #222 0%, #000 100%);
             }
         }
     </style>
@@ -43,15 +45,15 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-1/2 text-center md:text-left space-y-6">
                 <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold leading-tight text-dark text-shadow">
-                    Descubra como <span class="text-primary">construir uma fonte de renda</span> usando apenas o celular
+                    Transforme sua <span class="text-primary">Renda e sua Vida</span><br>usando apenas o celular
                 </h1>
-                <p class="text-lg text-gray-600">
-                    Um método prático e estratégico para mães e pessoas que buscam mais liberdade financeira e tempo para a família.
+                <p class="text-lg text-gray-700">
+                    Um método estratégico para mães e pessoas que buscam liberdade financeira e tempo para família.
                 </p>
                 <a href="#comprar" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg transition-all transform hover:scale-105">
                     QUERO GARANTIR O MEU GUIA
                 </a>
-                <p class="text-sm text-gray-500 mt-2">Conhecimento que transforma | Estude no seu ritmo</p>
+                <p class="text-sm text-gray-500 mt-2">Conteúdo 100% Digital | Acesso Imediato</p>
             </div>
             <div class="md:w-1/2">
                 <img src="https://i.imgur.com/yourimage.png" alt="Débora Rodrigues" class="rounded-full w-72 h-72 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl mx-auto">
@@ -62,7 +64,7 @@
     <!-- SOBRE A AUTORA -->
     <section class="py-16 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-10">Quem está compartilhando esse conteúdo?</h2>
+            <h2 class="text-3xl font-bold text-center mb-10">Quem compartilha esse conteúdo?</h2>
             <div class="flex flex-col md:flex-row items-center gap-10 bg-secondary p-8 rounded-2xl shadow-sm">
                 <div class="md:w-1/3">
                      <img src="https://i.imgur.com/yourimage.png" alt="Débora Rodrigues" class="rounded-full w-56 h-56 object-cover border-4 border-white shadow-lg mx-auto">
@@ -72,7 +74,7 @@
                         Olá! Eu sou a <strong>Débora Rodrigues de Souza</strong>. Assim como você, eu sou mãe e sei como é desafiador conciliar os cuidados com a família com a necessidade de gerar renda.
                     </p>
                     <p class="text-lg leading-relaxed text-gray-700">
-                        Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital. Hoje, compartilho esse conhecimento para ajudar outras pessoas a conquistarem mais autonomia e qualidade de vida através da internet.
+                        Foi pensando em encontrar uma alternativa que caberia no meu bolso e na minha rotina que eu estudei e desenvolvi estratégias reais de Marketing Digital. Hoje, compartilho esse conhecimento para ajudar outras pessoas a conquistarem mais autonomia.
                     </p>
                 </div>
             </div>
@@ -113,7 +115,7 @@
                     <li>• Para quem quer aprender conceitos reais de Marketing Digital.</li>
                     <li>• Para mães e pessoas que buscam novas fontes de estudo e renda.</li>
                     <li>• Para iniciantes que desejam começar de forma organizada.</li>
-                    <li>• Para quem valoriza conteúdo educativo e de qualidade.</li>
+                    <li>• Para quem valoriza conteúdo educacional e de qualidade.</li>
                 </ul>
             </div>
             <div class="bg-red-50 p-8 rounded-xl border border-red-100 shadow-sm">
@@ -139,15 +141,11 @@
                 </div>
                 <div class="bg-white p-5 rounded-lg shadow-sm">
                     <h4 class="font-bold">📱 Funciona apenas no celular?</h4>
-                    <p class="text-gray-600">Sim! As estratégias abordadas visam o uso de ferramentas acessíveis que podem ser operadas via dispositivos móveis.</p>
+                    <p class="text-gray-600">Sim! As estratégias abordadas visam o uso de ferramentas acessíveis via celular.</p>
                 </div>
                 <div class="bg-white p-5 rounded-lg shadow-sm">
                     <h4 class="font-bold">⏳ Por quanto tempo terei acesso?</h4>
                     <p class="text-gray-600">O acesso ao material digital é vitalício, permitindo que você estude no seu próprio ritmo.</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg shadow-sm">
-                    <h4 class="font-bold">🛡️ Tenho garantia?</h4>
-                    <p class="text-gray-600">Sim. Você tem uma garantia incondicional de 7 dias. Se não gostar, devolvemos seu dinheiro.</p>
                 </div>
             </div>
         </div>
@@ -156,25 +154,29 @@
     <!-- CTA FINAL -->
     <section id="comprar" class="py-16 px-4 bg-primary text-white">
         <div class="max-w-4xl mx-auto text-center space-y-6">
-            <h2 class="text-4xl font-bold">Pronto para investir no seu conhecimento?</h2>
-            <p class="text-xl opacity-90">Adquira agora o Guia Renda Digital e comece a estudar estratégias para mudar sua realidade.</p>
+            <h2 class="text-4xl font-bold">Invista em seu conhecimento!</h2>
+            <p class="text-xl opacity-90">Adquira agora e comece a estudar estratégias para mudar sua realidade.</p>
 
-            <!-- SELO DE GARANTIA -->
-            <div class="flex justify-center my-4">
-                <div class="bg-black text-yellow-400 border-2 border-yellow-400 rounded-full p-4 inline-flex items-center gap-3 font-bold shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <span class="text-lg">GARANTIA DE 7 DIAS</span>
+            <!-- SELO DE GARANTIA REDONDO PRETO E DOURADO COM ESTRELAS -->
+            <div class="flex justify-center my-6">
+                <div class="bg-guarantee text-gold gold-border rounded-full w-48 h-48 flex flex-col items-center justify-center shadow-2xl relative">
+                    <i class="fas fa-star absolute top-4 left-4 text-gold opacity-80"></i>
+                    <i class="fas fa-star absolute top-4 right-4 text-gold opacity-80"></i>
+                    <i class="fas fa-star absolute bottom-4 left-5 text-gold opacity-80"></i>
+                    <i class="fas fa-star absolute bottom-4 right-5 text-gold opacity-80"></i>
+                    
+                    <i class="fas fa-shield-alt text-4xl mb-2"></i>
+                    <h3 class="font-bold text-lg leading-tight">GARANTIA</h3>
+                    <h3 class="font-bold text-2xl leading-tight">7 DIAS</h3>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a href="LINK_DA_SUA_COMPRA_AQUI" class="bg-white text-primary font-bold py-4 px-12 rounded-lg text-xl shadow-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
+                <a href="LINK_DA_SUA_COMPRA_AQUI" class="bg-gold text-primary font-bold py-4 px-12 rounded-lg text-xl shadow-2xl hover:bg-gold/90 transition-all transform hover:scale-105">
                     QUERO ACESSAR O GUIA AGORA
                 </a>
             </div>
-            <p class="text-sm opacity-80 mt-4">Pagamento seguro | Acesso Imediato | Satisfação Garantida ou seu dinheiro de volta</p>
+            <p class="text-sm opacity-80 mt-4">Pagamento 100% Seguro | Satisfação Garantida</p>
         </div>
     </section>
 
@@ -191,33 +193,30 @@
                 <a href="#termos" class="hover:underline">Termos de Uso</a>
             </div>
             <p class="text-center text-xs mt-6 text-gray-400">
-                *Este produto é destinado para fins educacionais e didáticos. Resultados variam de acordo com o esforço e aplicação de cada indivíduo.
+                *Este produto é destinado para fins educacionais. Resultados variam de acordo com a aplicação de cada indivíduo.
             </p>
         </div>
     </footer>
 
-    <!-- POLÍTICA DE PRIVACIDADE -->
+    <!-- POLÍTICA E TERMOS -->
     <section id="politica" class="py-16 px-4 bg-gray-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Política de Privacidade</h2>
             <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4 shadow-sm">
                 <p>A sua privacidade é importante para nós. É política do Guia Renda Digital respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site.</p>
                 <p>Solicitamos informações pessoais apenas para poder lhe fornecer um serviço ou produto, de forma legal e legítima. Fazemos isso com total transparência e respeito.</p>
-                <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei ou para cumprir obrigações legais.</p>
-                <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
+                <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei.</p>
             </div>
         </div>
     </section>
 
-    <!-- TERMOS DE USO -->
     <section id="termos" class="py-16 px-4 bg-gray-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Termos de Uso</h2>
             <div class="bg-white p-8 rounded-xl leading-relaxed text-gray-700 space-y-4 shadow-sm">
-                <p>Ao acessar ou usar este site, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis.</p>
-                <p>O conteúdo apresentado neste site é para fins educacionais e informativos. Todo o material é protegido por leis de direitos autorais.</p>
-                <p>Não garantimos resultados financeiros. O sucesso nas áreas abordadas depende do empenho, dedicação e capacidade individual de cada aluno.</p>
-                <p>Reservamos o direito de modificar ou revisar estes termos a qualquer momento. Ao utilizar este site, você concorda em ficar vinculado à versão atual destes termos de serviço.</p>
+                <p>Ao acessar ou usar este site, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis.</p>
+                <p>O conteúdo apresentado neste site é para fins educacionais. Todo o material é protegido por leis de direitos autorais.</p>
+                <p>Não garantimos resultados financeiros. O sucesso depende do empenho, dedicação e capacidade individual de cada aluno.</p>
             </div>
         </div>
     </section>
